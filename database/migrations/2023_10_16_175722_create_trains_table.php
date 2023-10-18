@@ -22,8 +22,8 @@ return new class extends Migration
             $table->dateTime('orario_di_arrivo', $precision = 0);
             $table->float('Codice_Treno', 8, 0);
             $table->float('Numero_Carrozze', 2, 0);
-            $table->char('In_orario', 1);
-            $table->char('Cancellato', 1);
+            $table->enum('In_orario', ['in orario', 'in ritardo']);
+            $table->enum('Cancellato', ['Cancellato', 'Non cancellato']);
             $table->timestamps();
 
             /**
